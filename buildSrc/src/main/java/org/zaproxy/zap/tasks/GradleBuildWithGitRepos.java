@@ -123,6 +123,12 @@ public class GradleBuildWithGitRepos extends DefaultTask {
     public void buildWeeklyAddOns() throws GitAPIException, IOException {
         Path reposDir = repositoriesDirectory.get().getAsFile().toPath();
 
+        String strDir = repositoriesDirectory.get().getAsFile().getPath();
+        String strDataFile = repositoriesDataFile.get().getAsFile().getPath();
+
+        getLogger().lifecycle("repositoriesDirectory: {}", strDir);
+        getLogger().lifecycle("repositoriesDataFile: {}", strDataFile);
+
         List<RepoData> reposData = readRepoData();
         for (RepoData repoData : reposData) {
 
