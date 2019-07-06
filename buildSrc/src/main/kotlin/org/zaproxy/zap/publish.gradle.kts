@@ -69,9 +69,9 @@ publishing {
                 }
 
                 scm {
-                    url.set("https://github.com/zaproxy/zaproxy")
-                    connection.set("scm:git:https://github.com/zaproxy/zaproxy.git")
-                    developerConnection.set("scm:git:https://github.com/zaproxy/zaproxy.git")
+                    url.set("https://github.com/mpurusottamc/zaproxy")
+                    connection.set("scm:git:https://github.com/mpurusottamc/zaproxy.git")
+                    developerConnection.set("scm:git:https://github.com/mpurusottamc/zaproxy.git")
                 }
 
                 licenses {

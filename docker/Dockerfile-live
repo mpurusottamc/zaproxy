@@ -47,7 +47,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 ENV PATH $JAVA_HOME/bin:/zap/:$PATH
 
 # Pull the ZAP repo
-RUN git clone --depth 1 https://github.com/zaproxy/zaproxy.git && \
+RUN git clone --depth 1 https://github.com/mpurusottamc/zaproxy.git && \
 	# Build ZAP with weekly add-ons
 	cd zaproxy && \
 	ZAP_WEEKLY_ADDONS_NO_TEST=true ./gradlew :zap:prepareDistWeekly && \
