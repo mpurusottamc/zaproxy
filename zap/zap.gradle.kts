@@ -77,9 +77,11 @@ dependencies {
         setTransitive(false)
     }
 
+    testImplementation("com.github.tomakehurst:wiremock-jre8:2.24.1")
     testImplementation("junit:junit:4.11")
     testImplementation("org.hamcrest:hamcrest-all:1.3")
     testImplementation("org.mockito:mockito-all:1.10.8")
+    testImplementation("org.slf4j:slf4j-log4j12:1.7.28")
 
     testRuntimeOnly(files(distDir))
 }
@@ -193,7 +195,8 @@ listOf(
     "org.zaproxy.zap.extension.api.NodeJSAPIGenerator",
     "org.zaproxy.zap.extension.api.PhpAPIGenerator",
     "org.zaproxy.zap.extension.api.PythonAPIGenerator",
-    "org.zaproxy.zap.extension.api.RustAPIGenerator"
+    "org.zaproxy.zap.extension.api.RustAPIGenerator",
+    "org.zaproxy.zap.extension.api.WikiAPIGenerator"
 ).forEach {
     val langName = it.removePrefix("org.zaproxy.zap.extension.api.").removeSuffix("APIGenerator")
     val task = tasks.register<JavaExec>("generate${langName}ApiEndpoints") {
